@@ -1,16 +1,23 @@
-# Ajou Univ 파란학기 Team Samsung-Giants 
-## End to End AI Agent 보안 가시화 기술 개발 with COONTEC Co., Ltd.
+# End to End AI Agent 보안 가시화 기술 개발 with COONTEC Co., Ltd.
 
-
----
 # Target Agent
 ## 🦞 OpenClaw — Personal AI Assistant
 
 github : https://github.com/openclaw/openclaw
 
-Openclaw LLM 기반 오픈소스 AI Agent로 실제 작업을 수행하는 Autonomous Agent이다. 
-GPT, Claude 등의 LLM을 사용하여 추론, 의사결정, tool 선택을 하여 선택된 tool을 가지고 실제 shell을 실행하거나 API를 호출하는 등 다양한 작업을 수행한다. 수행한 행동에 대해서 Memory에 저장하여 context를 유지하며 장기 작업 수행이 가능하게 한다. 
-Openclaw는 LLM에 의해서 선택된 tool을 가지고 작업을 수행하기 때문에 잘못된 LLM의 판단에 따라 모든 파일을 삭제하거나 공격자의 악의적인 명령이 실행의 위험이 존재한다. 우리는 개인이 Openclaw를 더 안심하고 안전하게 사용할 수 있게 취약점을 스캔하고 LLM의 잘못된 판단을 방어하는 기술의 MVP를 개발하고자 한다. 
+OpenClaw는 LLM을 기반으로 실제 작업을 수행하는 오픈소스 AI Autonomous Agent입니다.  
+주요 기능은 다음과 같습니다:
+
+- 다양한 LLM을 활용하여 **추론·의사결정**을 내립니다.
+- LLM이 선택한 **tool**을 이용해 실제로 shell 명령 실행, API 호출 등 여러 작업을 자동으로 수행합니다.
+- 에이전트가 실행한 모든 행동은 **Memory에 저장**되어, context을 유지하며 장기적이고 복잡한 작업도 가능합니다.
+
+이처럼 OpenClaw는 LLM의 판단에 따라 선택된 툴로 작업을 진행하기 때문에,  
+**잘못된 판단이나 악의적인 명령에 의해 시스템 파일이 삭제되거나 보안 위협이 발생할 수 있는** 위험을 내포하고 있습니다.
+
+**우리는 사용자가 OpenClaw를 더욱 안심하고 사용할 수 있도록,  
+취약점 스캔 및 LLM 오판 방어 기능을 갖춘 보안 기술(MVP)을 개발하고자 합니다.**
+
 
 아래는 **Security Tool MVP**와 **OpenClaw 런타임**의 관계 목표이다.
 
@@ -37,8 +44,6 @@ flowchart LR
   Tools --> Viz
   Prompt --> Viz
 ```
-
-
 
 ---
 
@@ -75,14 +80,7 @@ Git-flow를 설명하는 그림 중 이만한 그림은 없는 것 같습니다.
 
 ## 커밋 메시지 구조
 Header, Body, Footer는 빈 행으로 구분한다.
-
-타입(스코프): 주제(제목)  Header(헤더)
-
-본문 // Body(바디)
-
-바닥글 // Footer
 Header는 필수이며 스코프는 생략 가능하다.
-
 타입은 해당 커밋의 성격을 나타내며 아래 중 하나여야 한다.
 
 | 타입 이름  | 내용                                         |
