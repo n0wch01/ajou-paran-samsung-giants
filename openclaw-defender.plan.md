@@ -1,37 +1,3 @@
----
-name: OpenClaw 보안 시나리오
-overview: claw-defender MVP는 Threat Scenarios → Test Probes → Gateway 프로브 + Defense Logic + Visualization 구조. A1·B1·C1 시나리오, CVSS 3.1. OpenClaw 코어 소스 미수정.
-todos:
-  - id: python-project
-    content: claw-defender/에 MVP 패키지 구조(Scenarios/Probes/Defender/Viz) + pyproject.toml, httpx, cvss, .env.example
-    status: pending
-  - id: cvss-method
-    content: claw-defender/ 내 CVSS 3.1 벡터·리포트(Viz 입력)
-    status: pending
-  - id: data-leakage
-    content: "A1: RAG·발송 도구 유출 — Scenarios+Probes+CVSS"
-    status: pending
-  - id: api-dos
-    content: "B1: 이메일 대용량·API 소진 — Probes+메트릭+Viz"
-    status: pending
-  - id: tool-abuse
-    content: "C1: 간접 주입→exec — Scenarios+Probes+CVSS"
-    status: pending
-  - id: defender-logic
-    content: "Defense Logic: audit 파싱·권고·(선택) 복사본 state에서만 openclaw security audit --fix"
-    status: pending
-  - id: viz
-    content: "Visualization: 실행 결과·CVSS·프로브 타임라인 표/간단 대시보드"
-    status: pending
-  - id: cli-audit-gate
-    content: claw-defender에서 openclaw security audit [--deep] --json subprocess
-    status: pending
-  - id: optional-fix-host
-    content: 감사 --fix는 복사본 state만
-    status: pending
-isProject: false
----
-
 # OpenClaw 보안 시나리오 테스트 계획 (claw-defender MVP)
 
 ## 목표 아키텍처
